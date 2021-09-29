@@ -1,0 +1,34 @@
+name: IRN_lol
+suffix: ~  # add suffix to saved images
+model: IRN
+distortion: sr
+scale: 2
+mode: LOL
+crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
+gpu_ids: [0]
+
+datasets:
+  test_1:  # the 1st test dataset
+    name: lol_database
+    mode: LOL
+    route: /home/lin-zhao/C_4500_500/test/
+
+#### network
+network_G:
+  which_model_G:
+    subnet_type: ResAT2Net_skip
+  in_nc: 3
+  out_nc: 32
+  block_num: [8]
+  scale: 2
+  init: kaiming
+
+
+#### path
+path:
+  pretrain_model_G: ./pretrained_model/lol_29500_G.pth
+
+
+
+
+

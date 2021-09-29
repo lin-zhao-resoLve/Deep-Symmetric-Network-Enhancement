@@ -1,0 +1,83 @@
+
+#### general settings
+
+name: 01_IFT_fiveK
+use_tb_logger: true
+model: IRN
+distortion: sr
+scale: 2
+gpu_ids: [0]
+mode: MTC
+
+#### datasets
+
+datasets:
+  train:
+    name: fiveK
+    mode: MTC
+    route: /home/lin-zhao/C_4500_500/train/
+    use_shuffle: true
+    n_workers: 8  # per GPU
+    batch_size: 2
+    patch_size: 180
+    use_flip: true
+    use_rot: true
+    color: RGB
+
+  eval:
+    name: val_fiveK
+    mode: MTC
+    route: /home/lin-zhao/C_4500_500/eval/
+
+
+#### network structures
+
+network_G:
+  which_model_G:
+      subnet_type: ResAT2Net_skip
+  in_nc: 3
+  out_nc: 32
+  block_num: [8]
+  init: kaiming
+
+
+#### path
+
+path:
+  pretrain_model_G: 
+  strict_load: true
+#  resume_state: /home/lin-zhao/pycharmprojects/Invertible-RGB/experiments/01_IRN_DB_x2_scratch_DIV2K/training_state/2000.state
+  resume_state:
+
+#### training settings: learning rate scheme, loss
+
+train:
+  lr_G: !!float 2e-4
+  beta1: 0.9
+  beta2: 0.999
+  niter: 1000000
+  warmup_iter: -1  # no warm up
+
+  lr_scheme: MultiStepLR
+  lr_steps: [150000, 300000, 450000, 600000, 750000]
+  lr_gamma: 0.5
+
+  pixel_criterion_forw: l2
+  pixel_criterion_back: l2
+
+  manual_seed: 10
+
+  val_freq: !!float 1000
+
+  lambda_fit_forw: 1.
+  lambda_rec_back: 1.
+  lambda_ce_forw: 1
+  weight_decay_G: !!float 1e-5
+  gradient_clipping: 10
+
+
+#### logger
+
+logger:
+  print_freq: 200
+  save_checkpoint_freq: !!float 1000
