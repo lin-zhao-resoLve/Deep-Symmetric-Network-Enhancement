@@ -63,6 +63,15 @@ The results of low-light image enhancement methods on the image in LOL dataset:
 - In the camera-ready of our ICCV paper, there are mistakes for the DeepLPF results in Fig. 1(c), Fig. 5(n), Fig. 6(g) and Tab. 1. The reason is that we trained 300 epochs with the batch size as 30 (we randomly cropped each image to 250x250 to set multiple batch sizes for training), while the original set is batch_size = 1. After the authors reminded us, we set the batch size to 1 and re-trained for 300 epochs to correct the results of the figures and tables in the paper.
 - Here are the updated version: https://www.shaopinglu.net/proj-iccv21/ImageEnhancement.html
 - Here are the updated version of our paper: https://www.shaopinglu.net/publications_files/ICCV21_Image_Enhancement.pdf
+## Citation
+```
+@inproceedings{zhaodeep,
+  title = {Deep Symmetric Network for Underexposed Image Enhancement with Recurrent Attentional Learning},
+  author = {Zhao, Lin and Lu, Shao-Ping and Chen, Tao and Yang, Zhenglu and Shamir, Ariel},
+  booktitle = {{IEEE/CVF} International Conference on Computer Vision (ICCV)},
+  year = {2021}
+}
+```
 ## Contact
 If you have any questions, please contact lin-zhao@mail.nankai.edu.cn.
 
