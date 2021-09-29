@@ -28,6 +28,9 @@ python test.py -opt options/test/test_for_fiveK.yml
 python test.py -opt options/test/test_for_lol.yml
 ```
 
+## The pretrained model
+The pre-trained models for the two datasets are in codes/pretrained_model
+
 
 
 
