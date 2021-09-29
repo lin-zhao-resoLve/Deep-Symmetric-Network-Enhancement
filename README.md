@@ -1,5 +1,5 @@
 # Deep Symmetric Network for Underexposed Image Enhancement with Recurrent Attentional Learning (ICCV 2021)
-This is the PyTorch implementation. The project can be used to study. It cannot be used for commercial purposes.
+This is the PyTorch implementation.
 
 ## Dependencies and Installation
 - Python 3 
@@ -39,7 +39,7 @@ The pre-trained models for the two datasets are in codes/pretrained_model
 
 ## Quantitative Results
 Quantitative evaluation results (PSNR / SSIM) of different methods on the two benchmark datasets. The images in the LOL dataset are in PNG format, while the images in the MIT-Adobe FiveK dataset are in JPEG format.
-![Quantitative result](./figures/compare_result.png)
+![Quantitative result](./figures/com_result.png)
 
 
 
@@ -62,6 +62,8 @@ The results of low-light image enhancement methods on the image in LOL dataset:
 - [DeepLPF: Deep Local Parametric Filters for Image Enhancement](https://github.com/sjmoran/DeepLPF)
 - In the camera-ready of our ICCV paper, there are mistakes for the DeepLPF results in Fig. 1(c), Fig. 5(n), Fig. 6(g) and Tab. 1. The reason is that we trained 300 epochs with the batch size as 30 (we randomly cropped each image to 250x250 to set multiple batch sizes for training), while the original set is batch_size = 1. After the authors reminded us, we set the batch size to 1 and re-trained for 300 epochs to correct the results of the figures and tables in the paper.
 - Here are the updated [PDF](https://www.shaopinglu.net/publications_files/ICCV21_Image_Enhancement.pdf) and [project page](https://www.shaopinglu.net/proj-iccv21/ImageEnhancement.html) of our paper.
+## License
+It is open source under BSD-3 license. Codes can be used freely only for academic or education purpose. If you want to apply it to industrial products, please send an email to Shao-Ping Lu at slu@nankai.edu.cn first.
 ## Citation
 ```
 @inproceedings{zhaodeep,
