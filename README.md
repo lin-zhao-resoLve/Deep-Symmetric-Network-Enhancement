@@ -1,5 +1,5 @@
 # Deep Symmetric Network for Underexposed Image Enhancement with Recurrent Attentional Learning (ICCV 2021)
-This is the PyTorch implementation
+This is the PyTorch implementation. The project can be used to study. It cannot be used for commercial purposes.
 
 ## Dependencies and Installation
 - Python 3 
