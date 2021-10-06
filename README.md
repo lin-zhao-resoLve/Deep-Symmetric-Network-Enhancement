@@ -66,11 +66,13 @@ The results of low-light image enhancement methods on the image in LOL dataset:
 It is open source under BSD-3 license. Codes can be used freely only for academic or education purpose. If you want to apply it to industrial products, please send an email to Shao-Ping Lu at slu@nankai.edu.cn first.
 ## Citation
 ```
-@inproceedings{zhaodeep,
-  title = {Deep Symmetric Network for Underexposed Image Enhancement with Recurrent Attentional Learning},
-  author = {Zhao, Lin and Lu, Shao-Ping and Chen, Tao and Yang, Zhenglu and Shamir, Ariel},
-  booktitle = {{IEEE/CVF} International Conference on Computer Vision (ICCV)},
-  year = {2021}
+@InProceedings{Zhao_2021_ICCV,
+    author    = {Zhao, Lin and Lu, Shao-Ping and Chen, Tao and Yang, Zhenglu and Shamir, Ariel},
+    title     = {Deep Symmetric Network for Underexposed Image Enhancement With Recurrent Attentional Learning},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {12075-12084}
 }
 ```
 ## Contact
